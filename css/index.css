@@ -1,0 +1,44 @@
+body {
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.78%;
+  padding-top: 35px;
+}
+
+#header__logo {
+  max-width: 144px;
+}
+
+#header__navbar ul {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  color: var(--White);
+}
+
+#navbar__contact {
+  color: var(--Very-dark-desaturated-blue);
+  text-transform: uppercase;
+  font-family: var(--Fraunces);
+  font-size: 16px;
+  height: 55px;
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 32px;
+}
+
+#navbar__contact:hover {
+  background-color: rgba(255, 225, 255, 0.25);
+  color: var(--White);
+}
