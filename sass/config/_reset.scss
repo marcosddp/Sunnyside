@@ -1,6 +1,5 @@
-@charset "UTF-8";
 /*
-
+    
   Con este reset vamos a resolver:
     👉 Unificar el uso de Custom Properties
     👉 Problemas de box-model más generales
@@ -9,17 +8,49 @@
     👉 Unificar la tipografía de todas las etiquetas de una web
 
 */
+
 /*import*/
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,600;1,600&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700&display=swap");
+
 /* Aquí definimos las variables*/
+
 /*Colors Primary*/
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);
+$Dark-blue: hsl(198, 62%, 26%);
+$Dark-moderate-cyan: hsl(168, 34%, 41%);
+
 /*Colors Neutral*/
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
 /*$negro: #393939;*/
+
 /* Tipografía */
+$Barlow: "Barlow", sans-serif;
+$Fraunces: "Fraunces", serif;
+
 /* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    $negro: #ececec;
+  }
+}
+
 /* Opcional */
 /* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+@media (prefers-contrast: high) {
+  :root {
+  }
+}
+
 /* Opcional */
 /* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
 @media (prefers-reduced-motion: reduce) {
@@ -28,6 +59,7 @@
     transition: none !important;
   }
 }
+
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
   margin: 0;
@@ -59,7 +91,6 @@ a {
   color: inherit;
   font-size: inherit;
 }
-
 /* ... excepto los que se encuentran en párrafos */
 p a {
   display: inline;
@@ -97,7 +128,6 @@ em {
   text-decoration: none;
   color: inherit;
 }
-
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,
@@ -110,7 +140,7 @@ q:after {
 /* Configuramos el texto que seleccionamos */
 ::selection {
   /*background-color: $negro;*/
-  color: white;
+  color: $White;
 }
 
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -148,7 +178,7 @@ svg {
 body {
   min-height: 100vh;
   font-size: 100%;
-  font-family: "Barlow", sans-serif;
+  font-family: $Barlow;
   font-size: 18px;
   /*color: var(--negro);*/
   /* opcional */
@@ -164,142 +194,3 @@ body {
   /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
-
-#header {
-  width: 100%;
-  height: 100vh;
-  background-image: url("../images/desktop/image-header.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 0 2.78%;
-  padding-top: 35px;
-}
-
-#header__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-#header__logo {
-  max-width: 144px;
-}
-
-#header__navbar ul {
-  display: flex;
-  align-items: center;
-  font-size: clamp(16.2px, 1.25vw, 18px);
-  column-gap: clamp(32px, 2.75vw, 40px);
-  color: white;
-}
-#header__navbar ul li:hover {
-  transform: scale(1.1);
-}
-
-#navbar-mobile__menu ul li:hover {
-  transform: scale(1.1);
-}
-
-.contact {
-  text-transform: uppercase;
-  font-family: "Fraunces", serif;
-  font-size: clamp(13.5px, 1.04vw, 15px);
-  height: 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 23px;
-  border-radius: 32px;
-}
-
-.contact--white {
-  color: #23303e;
-  background-color: white;
-}
-
-.contact--yellow {
-  background-color: #fad400;
-  color: #23303e;
-}
-
-#menu-icon,
-#navbar-mobile {
-  display: none;
-}
-
-#header__title {
-  color: white;
-  font-family: "Fraunces", serif;
-  font-size: clamp(37.5px, 3.82vw, 55px);
-  font-weight: bold;
-  margin-top: 100px;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-#arrow-icon {
-  height: 114px;
-  width: 36px;
-  margin: 0 auto;
-  margin-top: 60px;
-}
-
-@media (max-width: 870px) {
-  #header__navbar {
-    display: none;
-  }
-
-  #header__title {
-    line-height: 35px;
-  }
-
-  #menu-icon, #navbar-mobile {
-    display: block;
-  }
-
-  #navbar-mobile {
-    position: absolute;
-    opacity: 1;
-    width: 94.44vw;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 60px;
-    height: 250px;
-  }
-
-  #navbar-mobile__menu {
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    position: relative;
-    padding: 25px 0;
-  }
-  #navbar-mobile__menu::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -30px;
-    height: 30px;
-    width: 30px;
-    background-color: white;
-    clip-path: polygon(100% 0, 0 100%, 100% 100%);
-  }
-  #navbar-mobile__menu ul {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: #818498;
-    row-gap: 25px;
-  }
-}
-.hidden {
-  display: none !important;
-}
-
-/*# sourceMappingURL=index.css.map */

@@ -11,7 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" type="text/css" href="css/config.css" />
+
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Sunnyside agency landing page</title>
   </head>
@@ -27,7 +27,7 @@
             <li>About</li>
             <li>Services</li>
             <li>Projects</li>
-            <li id="navbar__contact">Contact</li>
+            <li class="contact contact--white">Contact</li>
           </ul>
         </nav>
 
@@ -35,23 +35,26 @@
           <img src="images/icon-hamburger.svg" alt="icon-hamburger" />
         </div>
 
-        <div id="navbar-mobile">
-        
-         
+        <div id="navbar-mobile" class="hidden">
           <div id="navbar-mobile__menu">
             <ul>
               <li>About</li>
               <li>Services</li>
               <li>Projects</li>
-              <li id="navbar__contact">Contact</li>
+              <li class="contact contact--yellow">Contact</li>
             </ul>
           </div>
+        </div>
+
         
-      </div>
 
       </div>
 
       
+      <h2 id="header__title">We are creatives</h2>
+      <div id="arrow-icon">
+        <img src="images/icon-arrow-down.svg" alt="icon-arrow-down" />
+      </div>
 
 
     </header>
@@ -96,5 +99,7 @@
   Services
   Projects
   Contact
-  --></body>
+  -->
+  <script src="js/index.js"></script>
+</body>
 </html>
