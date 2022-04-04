@@ -368,6 +368,40 @@ body {
   flex: 0 0 50%;
 }
 
+.fruits {
+  display: flex;
+}
+.fruits .fruit {
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  flex: 0 0 50%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+  text-align: center;
+}
+.fruits .fruit .fruit__text {
+  position: absolute;
+  padding: 0 200px;
+  left: 0;
+  top: 0;
+}
+.fruits .fruit:nth-child(2) {
+  background-image: url("../images/desktop/image-photography.jpg");
+}
+.fruits h3 {
+  color: #19536b;
+  margin-top: 400px;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+.fruits p {
+  font-size: 17px;
+  color: #25564b;
+}
+
 @media (max-width: 870px) {
   .features {
     display: flex;
@@ -396,6 +430,28 @@ body {
 
   .features__img {
     flex: inherit;
+  }
+
+  .fruits {
+    flex-direction: column;
+  }
+  .fruits .fruit {
+    flex: inherit;
+    width: 100vw;
+  }
+  .fruits .fruit .fruit__text {
+    position: absolute;
+    padding: 0 25%;
+    left: 0;
+    top: 0;
+  }
+  .fruits .fruit .fruit__text h3 {
+    margin-top: 350px;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  .fruits .fruit .fruit__text p {
+    font-size: 15px;
   }
 }
 

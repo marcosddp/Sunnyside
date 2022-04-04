@@ -85,6 +85,55 @@ body {
   flex: 0 0 50%;
 }
 
+.fruits{
+ 
+  display: flex;
+
+
+  .fruit{
+    
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    flex:0 0 50%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 600px;
+    text-align: center;
+   
+
+    .fruit__text{
+      position: absolute;
+      padding:0 200px;
+      
+      left:0;
+      top:0;
+    }
+
+
+
+  }
+
+  .fruit:nth-child(2) {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
+
+    h3{
+      color:$Dark-blue;
+      margin-top:400px;
+      margin-bottom:40px;
+      font-size:32px;
+      font-weight: 700;
+      
+      font-family:$Fraunces;
+    }
+    p{
+      font-size: 17px;
+      color:$Dark-desaturated-cyan;
+    }
+
+
+
+}
 
 @media (max-width: 870px) {
   .features {
@@ -124,6 +173,43 @@ body {
   flex:inherit;
 }
 
+
+.fruits{
+flex-direction: column;
+
+.fruit{
+  flex: inherit;
+  width: 100vw;
+
+  
+  .fruit__text{ 
+    position: absolute;
+    padding:0 25%;
+    
+    left:0;
+    top:0;
+
+    
+    h3{
+     
+      margin-top:350px;
+      margin-bottom:30px;
+      font-size:28px;
+      
+    }
+    p{
+      font-size: 15px;
+    
+    }
+
+
+  }
+
+
+}
+
+
+}
 
 
 }
