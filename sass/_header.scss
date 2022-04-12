@@ -85,6 +85,15 @@
   }
 
   @media (max-width: 870px) {
+  
+
+    #header {
+    
+      background-image: url("../images/mobile/image-header.jpg");
+     
+    }
+
+
     #header__navbar {
       display: none;
     }
