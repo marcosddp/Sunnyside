@@ -249,8 +249,52 @@ footer{
   align-items: center;
 
   #footer__logo{
-    max-width: 160px;
+    //max-width: 160px;
+    
+    margin-top:70px;
+    margin-bottom:45px;
+
+    img{
+      height: 32.5px;
+    }
+
   }
+
+  #footer__navbar{
+    ul{
+      display:flex;
+      column-gap: 45px;
+      color:$White;
+
+      
+    }
+
+    
+    }
+
+
+    .icons-socials{
+      
+      ul {
+        display:flex;
+        
+        column-gap: 25px;
+
+        img{
+          filter:brightness(0.8);
+        }
+
+        margin-top:35px;
+      }
+      
+
+
+     
+
+
+  }
+
+ 
 
 
 

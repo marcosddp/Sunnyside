@@ -496,7 +496,24 @@ footer {
   align-items: center;
 }
 footer #footer__logo {
-  max-width: 160px;
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+footer #footer__logo img {
+  height: 32.5px;
+}
+footer #footer__navbar ul {
+  display: flex;
+  column-gap: 45px;
+  color: white;
+}
+footer .icons-socials ul {
+  display: flex;
+  column-gap: 25px;
+  margin-top: 35px;
+}
+footer .icons-socials ul img {
+  filter: brightness(0.8);
 }
 
 /**/
